@@ -12,6 +12,11 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated WASM codecs
+    "public/wasm/**",
+    // Test helpers
+    "test-auth.js",
+    "neon-step-auth.mjs",
   ]),
 ]);
 
