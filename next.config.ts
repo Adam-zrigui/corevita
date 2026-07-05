@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["bullmq", "ioredis"],
   experimental: {
     optimizePackageImports: ["lucide-react", "@cornerstonejs/core", "@cornerstonejs/tools", "@cornerstonejs/dicom-image-loader"],
-    proxyClientMaxBodySize: "200mb",
   },
   headers: async () => [
     {

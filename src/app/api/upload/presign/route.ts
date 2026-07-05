@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const rl = rateLimit(`upload:${session.user.id}`, 5, 60_000);
+    const rl = rateLimit(`presign:${session.user.id}`, 20, 60_000);
     if (!rl.allowed) {
       return NextResponse.json({ error: "Too many uploads. Try again shortly." }, { status: 429 });
     }
